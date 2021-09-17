@@ -29,6 +29,8 @@ namespace ProNatur_Biomarkt_GmbH
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductScreen));
             this.label1 = new System.Windows.Forms.Label();
             this.tb_Name = new System.Windows.Forms.TextBox();
@@ -58,6 +60,7 @@ namespace ProNatur_Biomarkt_GmbH
             // 
             // tb_Name
             // 
+            this.tb_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(219)))));
             this.tb_Name.Location = new System.Drawing.Point(94, 12);
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(248, 26);
@@ -65,6 +68,7 @@ namespace ProNatur_Biomarkt_GmbH
             // 
             // tb_Marke
             // 
+            this.tb_Marke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(219)))));
             this.tb_Marke.Location = new System.Drawing.Point(94, 49);
             this.tb_Marke.Name = "tb_Marke";
             this.tb_Marke.Size = new System.Drawing.Size(152, 26);
@@ -92,6 +96,7 @@ namespace ProNatur_Biomarkt_GmbH
             // 
             // tb_Preis
             // 
+            this.tb_Preis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(219)))));
             this.tb_Preis.Location = new System.Drawing.Point(94, 125);
             this.tb_Preis.Name = "tb_Preis";
             this.tb_Preis.Size = new System.Drawing.Size(120, 26);
@@ -109,6 +114,7 @@ namespace ProNatur_Biomarkt_GmbH
             // 
             // cb_Kategorie
             // 
+            this.cb_Kategorie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(219)))));
             this.cb_Kategorie.FormattingEnabled = true;
             this.cb_Kategorie.Items.AddRange(new object[] {
             "Obst",
@@ -116,7 +122,8 @@ namespace ProNatur_Biomarkt_GmbH
             "Fleisch",
             "Fisch",
             "Drogerie",
-            "Getränke"});
+            "Getränke",
+            "Sonstige"});
             this.cb_Kategorie.Location = new System.Drawing.Point(94, 86);
             this.cb_Kategorie.Name = "cb_Kategorie";
             this.cb_Kategorie.Size = new System.Drawing.Size(152, 28);
@@ -153,7 +160,7 @@ namespace ProNatur_Biomarkt_GmbH
             this.btn_leeren.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_leeren.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_leeren.ForeColor = System.Drawing.Color.Black;
-            this.btn_leeren.Location = new System.Drawing.Point(340, 168);
+            this.btn_leeren.Location = new System.Drawing.Point(342, 168);
             this.btn_leeren.Name = "btn_leeren";
             this.btn_leeren.Size = new System.Drawing.Size(122, 42);
             this.btn_leeren.TabIndex = 11;
@@ -166,7 +173,7 @@ namespace ProNatur_Biomarkt_GmbH
             this.btn_loeschen.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_loeschen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_loeschen.ForeColor = System.Drawing.Color.Black;
-            this.btn_loeschen.Location = new System.Drawing.Point(464, 168);
+            this.btn_loeschen.Location = new System.Drawing.Point(466, 168);
             this.btn_loeschen.Name = "btn_loeschen";
             this.btn_loeschen.Size = new System.Drawing.Size(122, 42);
             this.btn_loeschen.TabIndex = 12;
@@ -180,14 +187,28 @@ namespace ProNatur_Biomarkt_GmbH
             this.produkteDGV.AllowUserToDeleteRows = false;
             this.produkteDGV.AllowUserToResizeColumns = false;
             this.produkteDGV.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.produkteDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.produkteDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.produkteDGV.BackgroundColor = System.Drawing.Color.White;
+            this.produkteDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(219)))));
+            this.produkteDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.produkteDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.produkteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.produkteDGV.Location = new System.Drawing.Point(94, 223);
             this.produkteDGV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.produkteDGV.Name = "produkteDGV";
             this.produkteDGV.RowHeadersVisible = false;
             this.produkteDGV.RowHeadersWidth = 62;
+            this.produkteDGV.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.produkteDGV.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.produkteDGV.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.produkteDGV.Size = new System.Drawing.Size(1138, 415);
             this.produkteDGV.TabIndex = 13;
             // 
