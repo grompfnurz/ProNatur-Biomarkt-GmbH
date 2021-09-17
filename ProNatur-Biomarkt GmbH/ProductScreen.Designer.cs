@@ -151,7 +151,7 @@ namespace ProNatur_Biomarkt_GmbH
             this.btn_bearbeiten.Name = "btn_bearbeiten";
             this.btn_bearbeiten.Size = new System.Drawing.Size(122, 42);
             this.btn_bearbeiten.TabIndex = 10;
-            this.btn_bearbeiten.Text = "Bearbeiten";
+            this.btn_bearbeiten.Text = "Aktualisieren";
             this.btn_bearbeiten.UseVisualStyleBackColor = false;
             this.btn_bearbeiten.Click += new System.EventHandler(this.btn_bearbeiten_Click);
             // 
@@ -203,14 +203,18 @@ namespace ProNatur_Biomarkt_GmbH
             this.produkteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.produkteDGV.Location = new System.Drawing.Point(94, 223);
             this.produkteDGV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.produkteDGV.MultiSelect = false;
             this.produkteDGV.Name = "produkteDGV";
+            this.produkteDGV.ReadOnly = true;
             this.produkteDGV.RowHeadersVisible = false;
             this.produkteDGV.RowHeadersWidth = 62;
             this.produkteDGV.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.produkteDGV.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.produkteDGV.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.produkteDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.produkteDGV.Size = new System.Drawing.Size(1138, 415);
             this.produkteDGV.TabIndex = 13;
+            this.produkteDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.produkteDGV_CellContentClick);
             // 
             // ProductScreen
             // 
