@@ -46,11 +46,16 @@ namespace ProNatur_Biomarkt_GmbH
 
         private void btn_bearbeiten_Click(object sender, EventArgs e)
         {
-            if (selektierteID == 0)
+            if (tb_Name.Text == "" || tb_Marke.Text == "" || tb_Preis.Text == "" || cb_Kategorie.Text == "")
             {
-                MessageBox.Show("Bitte erst ein Produkt auswählen!");
+                MessageBox.Show("Bitte erst einen Artikel auswählen!");
                 return;
             }
+            //if (selektierteID == 0)
+            //{
+            //    MessageBox.Show("Bitte erst ein Produkt auswählen!");
+            //    return;
+            //}
 
             string produktName = tb_Name.Text;
             string produktMarke = tb_Marke.Text;
@@ -60,7 +65,7 @@ namespace ProNatur_Biomarkt_GmbH
                 , produktName, produktMarke, produktKategorie, produktPreis,selektierteID);
             queryAusfuehren(query);
 
-
+            leereAlleFelder();
             ZeigeProdukte();
         }
 
@@ -71,10 +76,15 @@ namespace ProNatur_Biomarkt_GmbH
 
         private void btn_loeschen_Click(object sender, EventArgs e)
         {
-            if (selektierteID == 0)
+            if (tb_Name.Text == "" || tb_Marke.Text == "" || tb_Preis.Text == "" || cb_Kategorie.Text == "")
             {
-                MessageBox.Show("Bitte erst ein Produkt auswählen!");
+                MessageBox.Show("Bitte erst einen Artikel auswählen!");
+                return;
             }
+            //if (selektierteID == 0)
+            //{
+            //    MessageBox.Show("Bitte erst ein Produkt auswählen!");
+            //}
             string query = string.Format("delete from produkte where id = {0}",selektierteID);
             queryAusfuehren(query);
             leereAlleFelder();
